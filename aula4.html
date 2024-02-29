@@ -9,16 +9,16 @@
 
     <button onclick="alterar();" style="font-size: 20px;">Trocar texto</button>
     <h2 id="titulo">Exemplo 2 - DOM</h2>
-    <p id="p1">Texto 1</p>
-    <p id="p2">Texto 2</p>
+    <img id=img1 src="a.jpg" alt="" style="width: 200px;">
+    <img id=img2 src="pedro.jpg" alt="" style="width: 200px;">
     
     <script>
         function alterar(){
-           const elementos1= document.getElementById('p1');
-           const elementos2= document.getElementById('p2');
-           let troca = elementos2.innerHTML;
-           document.getElementById('p2').innerHTML = elementos1.innerHTML;
-           document.getElementById('p1').innerHTML = troca;
+           const elementos1= document.getElementById('img1');
+           const elementos2= document.getElementById('img2');
+           let troca = elementos2.src;
+           document.getElementById('img2').src = elementos1.src;
+           document.getElementById('img1').src = troca;
        
     }
     </script>
