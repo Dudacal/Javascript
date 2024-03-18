@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 -- Parte 2</title>
+</head>
+<body style="font-size: 30px;">
+    <p id="ex":></p>
+
+    <button onclick="botao()">Exibir relógio</button>
+    <script>
+        const intervalo = setInterval(relogio, 1000);
+        function relogio(){
+            const data = new Date();
+            document.getElementById("ex").innerHTML = data.toLocaleTimeString();
+        }
+        function parar(){
+            clearInterval(intervalo);
+        }
+
+        function botao(){
+            const botao =  document.getElementsByTagName("button") [0];
+            if(botao.innerHTML=="Ocultar relógio"){
+            document.getElementById("ex").style.color = "white";
+            botao.innerHTML = "Exibir relógio";
+        }else{
+            document.getElementById("ex").style.color = "black";
+            botao.innerHTML = "Ocultar relógio";
+
+        }
+    }
+    </script>
+</body>
+</html>
